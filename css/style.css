@@ -1,0 +1,334 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+* {margin:0px auto; padding:0px;}
+h1 {color:#f33e4b; text-align:center; font-weight:bold; font-size:16px;}
+a {text-decoration:none;}
+ul {list-style:none}
+li {display:inline-block}
+/*---All--*/
+.all {
+	width: 1305px;
+	background-image:url(../images/images_html/nen.jpg);
+	background-repeat:repeat-x repeat-y;
+}
+/*-- The End All--*/
+
+ 
+
+ 
+
+/* menu danh mục cố định  */
+.dn {
+	width:100%;
+	border-bottom:2px solid #F00;
+	height:50px; position:fixed;
+	margin-top:0px; z-index:9999;
+	background-color:rgb(99, 220, 3);
+	}
+		/* Đăng nhập/ Đăng ký */
+		.user {
+			width:20%;
+			height:50px; 
+			float:left
+			}
+		.user > ul {margin-left:40px;}
+		.user >ul>li {margin:5px; line-height:50px;}
+		.user >ul>li>a {color:#000}
+		
+		/* Tìm kiếm  */
+		.search {width:55%; height:50px;margin:0px auto; float:left}
+		.search-box {width:400px; height:25px; border:1px solid #0F6; border-radius:5px; margin-top:10px; float:right; margin-right:15px;}
+		.search-box >input {background:#FFF; width:314px; height:25px;}
+		
+		/* Giỏ hàng */
+		.cart {width:25%;height:50px;float:left;}
+		
+		
+	/* The End Danh mục */
+	
+/* Wrapper */
+.wrapper {
+	width:1000px;
+	background-color:#FFF;
+	border:1px solid #CCC;
+	border-radius:0px 0px 5px 5px;
+}
+	/* Logo Shop */
+	.logo {width:980px; min-height:90px; margin-top:50px; border:1px solid #dddddd; border-radius:5px; margin-bottom:10px; border-top:0px;}
+	.anh_logo {float:left;width:50%; height:90px;}
+	
+	/* Địa chỉ Shop  */
+	.info_top {float:right; width:50%;line-height:30px;margin-top:20px;}
+	.info_top >p {color:#F6F;font:normal 16px Tahoma, Geneva, sans-serif; text-shadow:#eee 0px 1px 1px;}
+	
+	/* Lineshow sản phẩm chính */
+	.slide {
+		height:327px;
+		margin:0px 10px 10px 10px;
+		border-radius:5px;
+	}
+	/* Menu top  */
+	.menu_top {
+		width:98%;
+		height:40px;
+		background:black;
+		margin:0px 10px 10px 10px; 
+		border-radius:5px;
+		}
+	.menu_top  > ul {
+		margin-left:25px;
+	}
+	.menu_top  > ul >li {
+		width:130px;
+		line-height:40px;
+		text-align:center;
+	}
+	.menu_top  > ul >li >a {
+		color:white; 
+		font-weight:bold; 
+	}
+	.menu_top  > ul > li >a:hover {
+		color:#F00; 
+		display:block
+	}
+	
+	/* The End menu */
+	
+	/* Main */
+.main {
+	clear:both; 
+	width:100%; 
+	
+	margin-top:10px; 
+	margin-left:10px;
+	}
+	/* Cột Left */
+	.left {
+		width:205px; 
+		float:left;
+		margin-left:0px;
+		margin-bottom: 10px;
+		
+	}
+	
+	/* Menu Danh Mục Sản Phẩm */
+	.dmsp {
+		width:197px; line-height:35px;
+		border-left:8px solid #000;
+		background-color:#f7f7f7;
+	}
+	.menu_pk {
+		width:203px; 
+		min-height:500px;
+		border:1px solid #dddddd;
+		border-top:0px;
+		margin-top:-20px;
+	}
+	.pk {
+		min-width:185px;
+		min-height:500px;
+		margin-left:5px;
+		margin-right:5px;
+	}
+	.pk>ul{
+		margin-top:20px;
+	}
+	.pk>ul>li {
+		margin-left:5px; 
+		margin-top:0px 10px;
+	}
+	.pk>ul>li>img {
+		float:left; 
+		padding-left:0px; 
+		margin-top:0px;
+	}
+	.pk > ul >li >a {
+		font-weight:bold; 
+		padding-left:5px; 
+		font-size:16px; 
+		color:#f33e4b
+	}
+	
+	.dm {
+		min-width:175px; 
+		min-height:100px; 
+		margin-left:10px; 
+		list-style:none; 
+		margin-top:10px;
+	}
+	
+	.dm >li >img {
+		float:left; 
+		padding-left:0px; 
+		margin-top:6px;
+	}
+	.dm >li >a {
+		margin-left:10px; 
+		font-size:14px; 
+		padding-top:5px;
+	}
+	.dm >li >a:hover{
+		color:#F00;
+		text-decoration: underline;
+		}
+	/* Đường line */	
+	.line1 {
+		background-image:url(../images/images_html/1.jpg); 
+		width:100%; height:5px; 
+		background-repeat:repeat-x;
+		margin-top:10px; 
+		margin-bottom:10px;
+	}
+	
+	
+	.line {
+		background-image:url(../images/images_html/1.jpg); 
+		width:100%; height:5px; 
+		background-repeat:repeat-x;
+		margin-top:10px;
+	}
+		
+	/* Box mạng xã hội và chia sẻ thông tin */
+	.face {width:200px; height:50px; margin-top:20px;}
+	.face >ul>li {margin-left:10px;}
+
+/* Menu Sản Phẩm Chính */
+.center {
+	width:550px; 
+	float:left; 
+	margin-left:10px;
+}
+.phukien{
+	height: 580px;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+.mypham{
+	height: 510px;
+	border: 1px solid #ddd;
+	border-top: none;
+
+}
+	/* thời trang nổi bật*/
+	.sp {
+		width:550px;
+		border-top:5px solid red;
+		height:30px; 
+		background-color:#16171b;
+	}
+	.sp > a >p:hover {
+		text-decoration:underline;
+		display:block
+		}
+	/* phụ kiện, mỹ phẩm nổi bật */
+	.sp2 {
+		width:550px;
+		border-top:5px solid red;
+		height:30px; 
+		background-color:#16171b;
+		margin-top:10px;
+		float:left
+	}
+	.sp2 > a >p:hover {
+		text-decoration:underline;
+		display:block
+		}
+	/* Hộp Sản phẩm */
+	.box_sp {width:160px; min-height:200px;float: left; margin:10px;}
+	.box_sp > a>p:hover {text-decoration:underline; display:block}
+	.dathang {width:150px; background:#FC3; margin:0px auto; line-height:30px; text-align:center; margin-top:5px; color:#FFF; border-radius:5px;}
+	.dathang > a:hover{background-color:#000; display:block; border-radius:5px;}
+	.sp2 {
+		width:550px;
+		border-top:5px solid red;
+		height:30px; 
+		background-color:#16171b;
+		margin-top:10px;
+	
+		clear:both;
+	}
+/* Menu Right */
+.right {
+	width:205px;
+	
+	float:left;
+	margin-left:10px;
+}
+	/* Sản phẩm mới */
+	.spm {
+		width:197px;line-height:35px;
+		border-left:8px solid #000;
+		background-color:#f7f7f7;
+	}
+	/* line show sản phẩm mới */
+	.slideshow {
+		width:203px; 
+		min-height:500px; 
+		border:1px solid #dddddd;
+		float:left;
+		border-top:0px;
+	}
+	
+	.box {width:203px; min-height:190px; margin:0px auto; margin-right:2px;}
+	/*line show tin tức  */
+	.tintuc {
+		width:197px;line-height:35px;
+		border-left:8px solid #000;
+		background-color:#f7f7f7;
+		float:right;
+		margin-top:10px;
+	}
+	.show	{
+		width: 203px;
+		margin: auto;
+		margin-top: 10px;
+		border:1px solid #dddddd;
+		border-top:0px;
+	}
+	.anh_tin { width:204px; margin:10px 5px 5px 2px;}
+	.anh_tin >img {float:left; padding-right:5px;}
+	.anh_tin>a {color:#000;width:120px; height:80px;}
+	.anh_tin>a:hover {text-decoration: underline}
+	
+	/* Hỗ trợ online */
+	.htonline {width:197px;line-height:35px;
+		border-left:8px solid #000;
+		background-color:#f7f7f7;
+		float:right;
+		margin-top:10px;
+	}
+	.box_online {
+		width:203px; height:230px; border:1px solid #CCC; border-top:0px; float:left; margin:0px auto; text-align:center}
+	
+	/* Thống kê online */
+		.tk_online {width:197px;line-height:35px;
+			border-left:8px solid #000;
+			background-color:#f7f7f7;
+			float: left;
+			margin-top: 10px;
+		}
+		.box_tk {
+			width:203px; height:100px; border:1px solid #CCC; border-top:0px; float:left; margin:0px auto; text-align:center}
+			.box_tk >ul >li {margin-top: 25px; float:left; margin-left:15px;}
+			.box_tk >ul >li >img {margin-right:5px;}
+	
+	/* Footer */
+.footer {  min-height:250px;background:green ;color: #000000;margin-top: 100px;
+		  border-radius:5px;clear: both;}
+		/* Menu footer  */
+		.menu_footer {width:100%; line-height:40px;}
+		.menu_footer > ul >li { margin-left:20px;}
+		.menu_footer > ul>li>a {color:#FFF;font-weight:bold}
+		.menu_footer > ul>li>a:hover {color:red; display:block}
+		/* Logo footer */
+		.footer_logo {width:40%; min-height:160px; float:left}
+		.footer_ht {width:60%;  min-height:160px; float:left}
+		.tt {width:40%; min-height:160px; float:left; margin-left:60px; color:#FFF}
+		.tt > ul {list-style:none}
+		.tt >ul >li {display:inline-block; margin-top:10px;}
+		.tt>ul >li >a {color:#FFF}
+		.tt >ul >li>a:hover {display:block;text-decoration:underline}
+		.copyright {width:100%; height:20px; color:#0F0; text-align:center}
+		

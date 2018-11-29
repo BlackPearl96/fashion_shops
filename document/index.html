@@ -1,0 +1,534 @@
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</script>
+<script type="text/javascript" src="js/jquery.simplyscroll.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<link rel="stylesheet" href="js/jquery.simplyscroll.css" media="all" type="text/css">
+<title>Shop Thời Trang</title>
+
+<!-- Query slide show Sản phẩm chính  -->
+<script type="text/javascript">
+	(function($) {
+		$(function() {
+			$(".slideshow").simplyScroll({orientation:'vertical',customClass:'vert'});
+		});
+	})(jQuery);
+</script>
+<!-- The end query   -->
+
+</head>
+
+<body>
+	<!-- query quảng cáo chạy 2 bên sườn web  -->
+	<div class="all">
+		<div id="divAdRight" style="display: block; position: fixed; margin-top:52px;">
+			<a href="#"><img src="images/img_qc/1.jpg" width="120" /></a>
+		</div>
+		<div id="divAdLeft" style="display: block; position: fixed;margin-top:52px;">
+			<a href="#"><img src="images/img_qc/2.jpg" width="120" /></a>
+		</div>
+		<script>
+			function FloatTopDiv()
+			{
+				startLX = ((document.body.clientWidth -MainContentW)/2)-LeftBannerW-LeftAdjust , startLY = TopAdjust+80;
+				startRX = ((document.body.clientWidth -MainContentW)/2)+MainContentW+RightAdjust , startRY = TopAdjust+80;
+				var d = document;
+				function ml(id)
+				{
+					var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+					el.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
+					el.x = startRX;
+					el.y = startRY;
+					return el;
+				}
+				function m2(id)
+				{
+					var e2=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+					e2.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
+					e2.x = startLX;
+					e2.y = startLY;
+					return e2;
+				}
+				window.stayTopLeft=function()
+				{
+					if (document.documentElement && document.documentElement.scrollTop)
+						var pY =  document.documentElement;
+					else if (document.body)
+						var pY =  document.body;
+					if (document.body.scrollTop > 30){startLY = 3;startRY = 3;} else {startLY = TopAdjust;startRY = TopAdjust;};
+					ftlObj.y += (pY+startRY-ftlObj.y)/16;
+					ftlObj.sP(ftlObj.x, ftlObj.y);
+					ftlObj2.y += (pY+startLY-ftlObj2.y)/16;
+					ftlObj2.sP(ftlObj2.x, ftlObj2.y);
+					setTimeout("stayTopLeft()", 1);
+				}
+				ftlObj = ml("divAdRight");
+        //stayTopLeft();
+        ftlObj2 = m2("divAdLeft");
+        stayTopLeft();
+    }
+    function ShowAdDiv()
+    {
+    	var objAdDivRight = document.getElementById("divAdRight");
+    	var objAdDivLeft = document.getElementById("divAdLeft");
+    	if (document.body.clientWidth < 1050)
+    	{
+    		objAdDivRight.style.display = "none";
+    		objAdDivLeft.style.display = "none";
+    	}
+    	else
+    	{
+    		objAdDivRight.style.display = "block";
+    		objAdDivLeft.style.display = "block";
+    		FloatTopDiv();
+    	}
+    }
+</script>
+<script>
+	document.write("<script type='text/javascript' language='javascript'>MainContentW = 1050;LeftBannerW = 130;RightBannerW = 130;LeftAdjust =0;RightAdjust = 0;TopAdjust = 10;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>
+<!-- The end quảng cáo 2 bên sườn  -->
+<!-- Thanh menu top -->
+<div class="dn">
+	<div class="user">  <!--Box chức năng đăng ký / đăng nhập  -->
+		<ul>
+			<li><a href="#"><img  style="float:left; margin-top:10px;" src="images/images_html/login_icon.png" width="30" height="30">Đăng Nhập</a></li>
+			<li>/</li>
+			<li><a href="#">Đăng Ký</a></li>
+		</ul>
+	</div>
+	<div class="search">
+		<form method="get">
+			<div class="search-box" style="">
+				<input  style="border:0px; text-align:center; line-height:23px;"type="text" placeholder="Nhập từ khóa tìm kiếm" />
+				<a href="#"><img  style="float:right; border-radius:0px 5px 5px 0px;"src="images/images_html/buttun-search.jpg" title="Tìm kiếm" /></a>
+			</div> 
+		</form>
+	</div>     
+	<div class="cart">  <!-- box giỏ hàng  -->
+		<a href="#"><img style=" margin-top:10px; border-radius:3px; float:left" src="images/images_html/icon_cart_02.jpg" height="26" width="40" title="click vào đây để xem giỏ hàng của bạn"></a>
+		<span  style="text-align:center; line-height:50px; color:#FFF; margin-left:10px;" class="tb">Có <strong style="color:#F00">4</strong> sản phẩm trong giỏ hàng</span>
+	</div>     
+</div>
+
+<!-- Wrapper -->
+<div class="wrapper">
+	<div class="logo">  <!-- ảnh logo shop  -->
+		<div class="anh_logo"><a href="#"><img src="images/images_html/logo.jpg" style="height:90px; border-bottom-left-radius: 5px;"></a></div>
+		<!-- Địa chỉ shop -->
+		<div class="info_top">
+			<p style="margin-bottom:4px;">Địa chỉ: Số 90,Đường Đông Quan ,Kim Nỗ Đông Anh Hà Nội.</p>
+			<p>Điện thoại: 04-3881 1184 - Hotline: 0986943906</p>
+		</div>
+	</div>
+	<!-- Menu Top Sản phẩm -->
+	<div class="menu_top">
+		<ul>
+			<li><a href="#">Trang Chủ</a></li>
+			<li><a href="#">Sản Phẩm Mới</a></li>
+			<li><a href="#">Tin Tức</a></li>
+			<li><a href="#">Giới Thiệu</a></li>
+			<li><a href="#">Liên Hệ</a></li>
+			<li><a href="#">Bản Đồ</a></li>
+			<li><a href="#">HD Mua Hàng</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".zoom").cycle({ 
+				fx:    'zoom', 
+				sync:  false, 
+				delay: -2000 
+			});
+		});
+	</script>
+
+	<div class="slide">
+		<div class="zoom">
+			<div class="box" style="float:left; width:980px; height:327px;">
+				<div> <img src="images/slide/sl (1).JPG" height="327px" width="980px"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="main">
+		<div class="left">
+			<div class="dmsp"><h1>DANH MỤC SẢN PHẨM</h1></div> <!-- Danh mục sản phẩm cột left  -->
+			<div class="menu_pk">
+				<div class="pk">
+					<ul>
+						<!--Thời Trang nữ  -->
+						<li style="margin-top:15px;"><img src="images/images_html/icon.jpg"> <a href="#">THỜI TRANG NỮ</a>
+							<div class="line"></div>
+							<ul class="dm">
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Áo Nữ</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Váy</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Quần Âu</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Quần Jeans</span></a></li>
+								<div class="line1"></div>
+							</ul>
+						</li>
+						<!-- Phụ kiện nữ  -->
+						<li><img src="images/images_html/icon.jpg"><a href="#">PHỤ KIỆN NỮ</a>
+							<div class="line"></div>
+							<ul class="dm">
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Túi Xách</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Ví</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Kính Mắt</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Đồng Hồ</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Thắt Lưng</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Trang Sức</span></a></li>
+								<div class="line1"></div>
+							</ul>
+						</li>
+						<!-- Mỹ Phẩm nữ -->
+						<li><img src="images/images_html/icon.jpg"><a href="#">MỸ PHẨM NỮ</a>
+							<div class="line"></div>
+							<ul class="dm">
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Nước Hoa</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Phấn</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Son</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Kem Dưỡng Da</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Sữa Tắm</span></a></li>
+								<div class="line1"></div>
+							</ul>
+						</li>
+						
+						<!-- Thời trang nam  -->
+						<li><img src="images/images_html/icon.jpg"><a href="#">THỜI TRANG NAM</a>
+							<div class="line"></div>
+							<ul class="dm">
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Áo Nam</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Đồ Thể Thao</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Quần Âu</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Quần Jeans</span></a></li>
+								<div class="line1"></div>
+							</ul>
+						</li>
+						<!-- Phụ liện nam -->
+						<li><img src="images/images_html/icon.jpg"><a href="#">PHỤ KIỆN NAM</a>
+							<div class="line"></div>
+							<ul class="dm">
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Ví</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Kính Mắt</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Đồng Hồ</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Thắt Lưng</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Giầy Nam</span></a></li>
+								<div class="line1"></div>
+							</ul>
+						</li>
+						<!-- Mỹ Phẩm nam  -->
+						<li><img src="images/images_html/icon.jpg"><a href="#">MỸ PHẨM NAM</a>
+							<div class="line"></div>
+							<ul class="dm">
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Nước hoa</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Sữa Rửa Mặt</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Dầu Gội</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Sữa Tắm</span></a></li>
+								<div class="line1"></div>
+								<li><img src="images/images_html/icon1.jpg"><a href="#"><span>Kem Dưỡng Da</span></a></li>
+								<div class="line1"></div>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- mạng xã hội -->
+			<div class="face">
+				<ul>
+					<li><a href="#"><img src="images/images_html/facebook.png" height="50" width="50"></a></li>
+					<li><a href="#"><img style="margin-top:3px;" src="images/images_html/tw.jpg" height="50" width="50"></a></li>
+					<li><a href="#"><img src="images/images_html/share.jpg" height="50" width="50"></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- giao diện center -->
+		<div class="center">
+			
+			<!-- Box thời trang nổi bật -->
+			<div class="sp"><a href="#"><p style="color:#FFF; text-align:left; line-height:30px; font-weight:bold; padding-left:10px;">Thời Trang Nổi Bật</p></a></div>
+			<div class="box_sp"><a href="#"><img src="images/images_center/c1 (1).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Áo Váy Xám</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+
+			<div class="box_sp"><a href="#"><img src="images/images_center/c1 (4).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Áo Đôi Kẻ Trắng/Đen</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">750.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+
+			<div class="box_sp"><a href="#"><img src="images/images_center/c1 (5).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Váy Ngắn</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">950.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+
+			<div class="box_sp"><a href="#"><img src="images/images_center/c1 (8).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Áo Đôi Đỏ/Trắng</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">750.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+
+			<div class="box_sp"><a href="#"><img src="images/images_center/c1 (7).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Thời Trang Công Sở</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">1.450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+
+			<div class="box_sp"><a href="#"><img src="images/images_center/c1 (1).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Áo Váy Hồng</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">650.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			
+			<!-- Phụ Kiện nổi bật -->
+			<div class="sp2"><a href="#"><p style="color:#FFF; text-align:left; line-height:30px; font-weight:bold; padding-left:10px;">Phụ Kiện Nổi Bật</p></a></div>
+			<div class="box_sp"><a href="#"><img src="images/images_pk/pk (1).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Túi xách nam</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/images_pk/pk (2).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Đồng Hồ Nữ</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/images_pk/pk (3).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Kính Nam</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/images_pk/pk (4).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Son Môi Cao Cấp</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/images_pk/pk (5).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Đồng Hồ Nam</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/images_pk/pk (6).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Thắt Lưng Nam</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">450.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+
+			</div>
+			
+			<!-- Mỹ Phẩm Nổi Bật -->
+			<div class="sp2"><a href="#"><p style="color:#FFF; text-align:left; line-height:30px; font-weight:bold; padding-left:10px;">Mỹ Phẩm Nổi Bật</p></a></div>
+			<div class="box_sp"><a href="#"><img src="images/mypham/mp (1).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Son Môi Hàn Quốc</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">250.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+
+			<div class="box_sp"><a href="#"><img src="images/mypham/mp (2).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Mặt Nạ Dưỡng Da</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">1.050.000VND/box</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/mypham/mp (3).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Kem Dưỡng Da</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">275.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/mypham/mp (4).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Dầu Gội Đầu Xmen</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">95.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+			<div class="box_sp"><a href="#"><img src="images/mypham/mp (5).jpg" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Dầu Gội Đầu LAB</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">1.250.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+
+			<div class="box_sp"><a href="#"><img src="images/mypham/mp (6).png" style=" width:160px; height:150px;"><p style="text-align:center; margin-top:5px;">Phấn Trang Điểm Nam</p></a>
+				<br/>
+				<p style="color:#F00; text-align:center">Giá:<span style="font-weight:bold">950.000VND</span></p>
+				<div class="dathang"><a href="#"><p style="color:#FFF; font-weight:bold">Đặt Hàng</p></a></div>
+			</div>
+		</div>
+		<!-- The End Center -->
+
+		<div class="right">
+			<!-- Sản Phẩm bán chạy -->        
+			<div class="spm"><h1>SẢN PHẨM BÁN CHẠY</h1></div>
+			<!-- slide show sản phẩm bán chạy -->
+			<div class="slideshow">
+
+				<div class="box"><a href="#"><img src="images/images_nam/nam (1).jpg" style="width:203px;height:190px;"></a>
+					<br/>
+					<br/>
+					<p style="text-align:center;font-weight:bold">Áo nam</p><br/>
+					<p style="text-align:center;color:#F00">Giá:350.000 VN</p>
+				</div>
+				<div class="line1"></div>
+				<div class="box"><a href="#"><img src="images/images_nam/nam (2).jpg" style="width:203px;height:190px;"></a>
+					<br/>
+					<br/>
+					<p style="text-align:center;font-weight:bold">Áo nam</p><br/>
+					<p style="text-align:center;color:#F00">Giá:350.000 VND</p>
+				</div>
+				<div class="line1"></div>
+			</div>
+			
+			<!-- query cho tin tức mới -->
+			<div class="tintuc"><h1>TIN TỨC MỚI</h1></div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script type="text/javascript" src="js/jquery.vticker.js"></script>
+			<script type="text/javascript">
+				$(function() {
+					$('.show').vTicker({ 
+						speed: 500,
+						pause: 3000,
+						animation: 'fade',
+						mousePause: true,
+						showItems: 3
+					});
+				});
+			</script>
+
+			<div class="show">
+				<ul>
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin (1).jpg" height="80px;" width="80px"><a href="#">Mẹo Hay Giúp Chọn Giày Vừa Khít Cho Nam</a></div>
+					</li> 
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin (2).jpg" height="80px;" width="80px"><a href="#">Xử Lý Nhanh Nấm Mốc Trên Giày Da </a></div>
+					</li> 
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin (3).jpg" height="80px;" width="80px"><a href="#">Những Mẹo Cực Hay Về Quần Áo Không Thể Bỏ Qua</a></div>
+					</li> 
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin (4).jpg" height="80px;" width="80px"><a href="#">Những Nguyên Tắc Mặc Đồ Nam Đẹp Không Thể Bỏ Qua</a></div>
+					</li> 
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin(5).jpg" height="80px;" width="80px"><a href="#"> Cách Giặt Áo Thun Mới Mua</a></div>
+					</li> 
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin (6).jpg" height="80px;" width="80px"><a href="#">Tuyệt Chiêu Chọn Áo Thun Body Cực Chuẩn</a></div>
+					</li> 
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin (7).png" height="80px;" width="80px"><a href="#">Mẹo Chọn Thắt Lưng Đẹp Đón Tết</a></div>
+					</li> 
+					<li>
+						<div class="anh_tin"><img src="images/images_tintuc/tin (8).jpg" height="80px;" width="80px"><a href="#">Mẹo Giữ Quần Áo Không Ra Màu Bằng Nguyên Liệu Thiên Nhiên</a></div>
+					</li> 
+				</ul>
+			</div>
+			
+			<!--Box hộ trợ online-->
+			<div class="htonline"><h1>Hỗ Trợ Online</h1></div>
+			<div class="box_online">
+				<ul>
+					<li>
+						<img  src="images/images_html/girl.gif">
+						<br/>
+						<span style="color:#00F; font-weight:bold;">Bán Hàng Online</span>
+						<br/>
+						<a href=”ymsgr:sendIM?mongmotngaygapem_90“><img style="margin-top:5px; margin-bottom:5px;" border=”0″ src="images/images_html/yahoo_online.gif"></a>
+						<b style="color:#00D936;">Sales1@xinhshop.com.vn</b>
+					</li>
+					<li>
+						<img  style="margin-top:10px;" src="images/images_html/men.gif">
+						<br/>
+						<span style="color:#00F; font-weight:bold;">Bán Hàng Online</span>
+						<a href=”ymsgr:sendIM?mongmotngaygapem_90“><img style="margin-top:5px; margin-bottom:5px;" border=”0″ src="images/images_html/yahoo_online.gif"></a>
+						<b style="color:#00D936;">Sales2@xinhshop.com.vn</b>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Box thống kê truy cập  -->
+			<div class="tk_online"><h1>Thống Kê Truy Cập</h1></div>
+			<div class="box_tk">
+				<ul>
+					<li><img src="images/images_html/list-style-image.png" height="10" width="10">Số Lượng Online : 10</li>
+					<li><img src="images/images_html/list-style-image.png" height="10" width="10">Số Lượng Truy Cập : 25</li>
+				</ul>
+			</div>
+			<div class="box_qc" style="float:left; margin-top:10px;"><a href="#"><img src="images/img_qc/1456740434-300x450.gif" height="300" width="203"></a></div>
+		</div>
+	</div>
+</div>
+<!-- Footer -->
+<div class="footer">
+	<div class="menu_footer">
+		<ul>
+			<li><a href="#">Trang Chủ</a></li>
+			<li><a href="#">Sản Phẩm Mới</a></li>
+			<li><a href="#">Tin Tức</a></li>
+			<li><a href="#">Giới Thiệu</a></li>
+			<li><a href="#">Liên Hệ</a></li>
+			<li><a href="#">Bản Đồ</a></li>
+		</ul>
+	</div>
+	<div class="footer_logo"><a href="#"><img src="images/images_html/logo_footer.jpg" height="150px;"></a></div>
+	<div class="footer_ht">
+		<div class="tt">
+			<ul>
+				<li style="font-weight:bold">Hỗ trợ khách hàng</li>
+				<br/>
+				<li><strong>Tel:</strong> 04.3881 1184</li>
+				<br/>
+				<li><strong>Hotline:</strong>  0986 943 906</li>
+				<br/>
+				<li><strong>Email:</strong>  lienhe@xinhshop.com.vn</li>
+				<br/>
+				<li><a href="#"><strong>Website:</strong>  www.XinhShop.com.vn</a></li>
+			</ul>
+		</div>
+		<div class="tt">
+			<ul>
+				<li style="font-weight:bold">Thông tin XinhShop</li>
+				<br/>
+				<li><a href="#">Tin tuyển dụng</a></li>
+				<br/>
+				<li><a href="#">Thông tin khuyến mại</a></li>
+				<br/>
+				<li><a href="#">Sơ đồ web</a></li>
+				<br/>
+				<li><a href="#">Thông tin về shop</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="copyright">
+		<p style="margin-top:5px; margin-bottom:5px">Bản quyền © 2009-2012 XinhShop.com.vn - Quần Áo Thời Trang !</p>
+		<p><strong>Số 90,Đường Đông Quan ,Kim Nỗ Đông Anh Hà Nội. Tel: 04-3881 1184</strong></p>
+	</div>       		
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

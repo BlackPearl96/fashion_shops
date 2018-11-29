@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteRule ^trang-chu.html$ index.php
+RewriteRule ^san-pham-moi.html$ index.php?controller=sp_new
+RewriteRule ^tin-tuc.html$ index.php?controller=news
+RewriteRule ^gioi-thieu.html$ index.php?controller=gioithieu
+RewriteRule ^lien-he.html$ index.php?controller=lienhe
+RewriteRule ^huong-dan-mua-hang.html$ index.php?controller=huongdan
+RewriteRule ^ban-do.html$ index.php?controller=bando
+RewriteRule ^gio-hang.html$ index.php?controller=cart
+RewriteRule ^-(.*)-(.*).html$ index.php?controller=list_sp&id_danhmuc=$2
+RewriteRule ^([0-9]+)-chi-tiet-san-pham-(.*).html$ index.php?controller=chitiet_sanpham&id_sanpham=$1
+RewriteRule ^tin-tuc-(.*)-([0-9]+).html$ index.php?controller=list_news&id_news=$2
+RewriteRule ^gio-hang.html$ index.php?controller=cart
+RewriteRule ^dang-nhap.html$ index.php?controller=dangnhap
+RewriteRule ^dang-ky.html$ index.php?controller=dangky
+RewriteRule ^khach-hang.html$ index.php?controller=khachhang
+RewriteRule ^sua-thong-tin.html$ index.php?controller=khachhang&act=edit
+RewriteRule ^doi-mat-khau.html$ index.php?controller=khachhang&act=doimk
+RewriteRule ^lich-su-mua-hang.html$ index.php?controller=khachhang&act=lichsumuahang
+RewriteRule ^don-hang-cua-ban-([0-9]+).html$ index.php?controller=chitietdonhang&id=$1
